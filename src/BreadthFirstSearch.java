@@ -39,7 +39,7 @@ public class BreadthFirstSearch<V> extends Search<V> {
         for (Vertex<V> x = vertex; edgeTo.containsKey(x); x = edgeTo.get(x)) {
             path.add(x);
         }
-        path.add(edgeTo.containsKey(vertex) ? edgeTo.get(vertex) : vertex); // добавляем начальную вершину
+        path.add(edgeTo.containsKey(vertex) ? edgeTo.get(vertex) : vertex);
         Collections.reverse(path);
         return path;
     }
