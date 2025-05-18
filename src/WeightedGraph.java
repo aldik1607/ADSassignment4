@@ -10,7 +10,6 @@ public class WeightedGraph<V> {
     public void addEdge(Vertex<V> source, Vertex<V> dest, double weight) {
         source.addAdjacentVertex(dest, weight);
         map.get(source).add(dest);
-        // For undirected graph, also add: dest.addAdjacentVertex(source, weight);
     }
 
     public Set<Vertex<V>> getVertices() {
